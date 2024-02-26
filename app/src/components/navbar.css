@@ -51,8 +51,8 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px; /* Adjust underline position as needed */
+    bottom: -2px;
     width: 100%;
     height: 2px;
-    transition: background-color 0.3s, width 0.3s; /* Smooth transition for background color and width change */
+    transition: background-color 0.3s, width 0.3s; /* Smooth transition for background color and width change (we can modify based on the design team) */
 }
