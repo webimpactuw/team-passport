@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
-import { BasicButton } from "../components/Button";
+import { IconButton } from "../components/Button";
 import { CenterContainer } from "../components/Container";
+import { faClipboardQuestion } from "@fortawesome/free-solid-svg-icons";
 
 export const DashboardPage = () => {
     return (
@@ -9,11 +9,7 @@ export const DashboardPage = () => {
             <Header>
                 Dashboard
             </Header>
-            <BasicButton>
-                <Link to="/quiz">
-                    Quizzes
-                </Link>
-            </BasicButton>
+            <IconButton link="/quiz" icon={faClipboardQuestion}/>
         </CenterContainer>
     )
 }
