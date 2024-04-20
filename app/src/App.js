@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { QuizzesPage } from './pages/QuizzesPage';
-import { DashboardPage } from './pages/DashboardPage';
+import QuizzesPage from './pages/QuizzesPage';
+import DashboardPage from './pages/DashboardPage';
 import './App.css';
 
 

@@ -1,15 +1,14 @@
-import { Header } from "../components/Header";
 import { IconButton } from "../components/Button";
 import { CenterContainer } from "../components/Container";
 import { faClipboardQuestion } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-export const DashboardPage = () => {
+export default function DashboardPage() {
     return (
         <CenterContainer>
-            <Header>
-                Dashboard
-            </Header>
-            <IconButton link="/quiz" icon={faClipboardQuestion}/>
+            <Link to="/quiz">
+                <IconButton icon={faClipboardQuestion}/>
+            </Link>
         </CenterContainer>
     )
 }

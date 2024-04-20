@@ -1,19 +1,11 @@
-import { BasicButton } from "../components/Button"
-import { CenterContainer } from "../components/Container"
-import { Header } from "../components/Header"
+import { QuizBoard } from "../components/Quizboard"
 
-export const QuizzesPage = () => {
+export default function QuizzesPage() {
     return (
-        <CenterContainer>
-            <Header>
-                Quizzes
-            </Header>
-            <div className="grid grid-cols-4">
-                <BasicButton> 1 </BasicButton>
-                <BasicButton> 2 </BasicButton>
-                <BasicButton> 3 </BasicButton>
-                <BasicButton> 4 </BasicButton>
-            </div>
-        </CenterContainer>
+        <QuizBoard question={`Which of the following is divisible by 4?`}
+            option1={`1`}
+            option2={`12`}
+            option3={`123`}
+            option4={`1234`} />
     )
 }

@@ -1,20 +1,25 @@
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export function BasicButton({children}) {
+export function BasicButton({children, style}) {
     return (
-        <button className="px-4 py-4 bg-cyan-300 text-gray-800 m-4 rounded-3xl text-5xl">
+        <button className={`bg-cyan-300 text-gray-800 rounded-3xl ${style}`}>
             {children}
         </button>
     )
 }
 
-export function IconButton({link, icon}) {
+export function IconButton({icon}) {
     return (
-        <BasicButton>
-            <Link to={link}>
-                <FontAwesomeIcon icon={icon}/>
-            </Link>
+        <BasicButton style={`w-16 h-20 m-4 text-5xl`}>
+            <FontAwesomeIcon icon={icon}/>
+        </BasicButton>
+    )
+}
+
+export function TextButton({option}) {
+    return (
+        <BasicButton style={`w-80 h-10 m-2 text-xl`}>
+            {option}
         </BasicButton>
     )
 }
