@@ -5,11 +5,11 @@ export function QuizBoard({question, option1, option2, option3, option4}) {
     return (
         <CenterContainer style={`text-xl`}>
             {question}
-            <CenterContainer>
-                <TextButton option = {option1}/>
-                <TextButton option = {option2}/>
-                <TextButton option = {option3}/>
-                <TextButton option = {option4}/>
+            <CenterContainer style={`w-full`}>
+                <TextButton option = {option1} style = {`w-full bg-blue-500 text-white`}/>
+                <TextButton option = {option2} style = {`w-full bg-blue-500 text-white`}/>
+                <TextButton option = {option3} style = {`w-full bg-blue-500 text-white`}/>
+                <TextButton option = {option4} style = {`w-full bg-blue-500 text-white`}/>
             </CenterContainer>
         </CenterContainer>
     )
