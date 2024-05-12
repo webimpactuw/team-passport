@@ -10,7 +10,7 @@ export default function Sidebar() {
     }
 
   return (
-      <div className="sidebar">
+      <div className="sidebar fixed top-8 left-6">
         <button type="button" className="btn" onClick={toggleSideBar}><IconButton link="" icon={faBars}></IconButton></button>
         <ul className={openMenu ? "block" : "hidden"}>
           <li className="flex items-center group"><IconButton link="/" icon={faGrip}/><p className="ml-2 opacity-0 pointer-event-none group-hover:opacity-100 group-hover:pointer-events-auto">Dashboard</p></li>
