@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export function BasicButton({children, style}) {
+export function BasicButton({children, style, onClick}) {
     return (
-        <button className={`text-gray-800 rounded-3xl ${style}`}>
+        <button className={`text-gray-800 rounded-3xl ${style}`} onClick={onClick}>
             {children}
         </button>
     )
@@ -16,9 +16,9 @@ export function IconButton({icon}) {
     )
 }
 
-export function TextButton({option, style}) {
+export function TextButton({option, style, onClick}) {
     return (
-        <BasicButton style={`h-10 m-2 text-xl ${style}`}>
+        <BasicButton style={`h-10 m-2 text-xl ${style}`} onClick={onClick}>
             {option}
         </BasicButton>
     )
