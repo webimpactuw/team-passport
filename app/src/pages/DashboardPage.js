@@ -1,14 +1,9 @@
-import { IconButton } from "../components/Button";
-import { CenterContainer } from "../components/Container";
-import { faClipboardQuestion } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
 
 export default function DashboardPage() {
     return (
-        <CenterContainer>
-            <Link to="/quiz">
-                <IconButton icon={faClipboardQuestion}/>
-            </Link>
-        </CenterContainer>
+        <main className="flex">
+            <Sidebar />
+        </main>
     )
 }

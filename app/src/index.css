@@ -9,9 +9,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:cornsilk;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+progress {
+  background: dimgray;
+  border-radius: 1rem;
+}
+
+progress::-moz-progress-bar {
+  background: gold;
 }
