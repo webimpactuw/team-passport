@@ -1,11 +1,11 @@
 import { CenterContainer } from "../components/Container";
-import Sidebar from "./Sidebar";
+import Sidebar from "../components/Sidebar";
 
 export default function LandingPage() {
     return (
         <main className="flex">
             <Sidebar />
-            <CenterContainer>
+            <CenterContainer style={`w-full`}>
                 <h1 className="m-20 text-6xl">Passport</h1>
                 <section className="flex m-20">
                     <div className="contentCard border-2 border-gray-200 w-96 h-80 mr-20">

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar } from "@fortawesome/free-solid-svg-icons"
 import logo from "../math.jpg"
 import { useState } from "react"
+import Sidebar from "../components/Sidebar"
 
 const quizData = [
     {
@@ -53,26 +54,29 @@ export default function QuizzesPage() {
     }
 
     return (
-        <CenterContainer>
-            <div className = "w-2/3 m-8 flex justify-between">
-                <progress value = {progress / quizData.length} className="w-11/12"/>
-                <FontAwesomeIcon icon = {faStar} className="text-yellow-400 fa-xl"/>
-            </div>
-            <CenterContainer style={`grid-cols-2 w-2/3 h-3/5 m-12 gap-10`}>
-                <img src={quizData[progress].img} alt=""/>
-                <CenterContainer style={`text-xl`}>
-                    {quizData[progress].question}
-                    <CenterContainer style={`w-full`}>
-                        {quizData[progress].options.map((option) => (
-                            <TextButton option={option} onClick={() => optionClick(option)} style={answer === option ? `w-full bg-blue-500 text-white` : `w-full bg-cyan-300`}/>
-                        ))}
+        <main className="flex">
+            <Sidebar />
+            <CenterContainer>
+                <div className = "w-2/3 m-8 flex justify-between">
+                    <progress value = {progress / quizData.length} className="w-11/12"/>
+                    <FontAwesomeIcon icon = {faStar} className="text-yellow-400 fa-xl"/>
+                </div>
+                <CenterContainer style={`grid-cols-2 w-2/3 h-3/5 m-12 gap-10`}>
+                    <img src={quizData[progress].img} alt=""/>
+                    <CenterContainer style={`text-xl`}>
+                        {quizData[progress].question}
+                        <CenterContainer style={`w-full`}>
+                            {quizData[progress].options.map((option) => (
+                                <TextButton option={option} onClick={() => optionClick(option)} style={answer === option ? `w-full bg-blue-500 text-white` : `w-full bg-cyan-300`}/>
+                            ))}
+                        </CenterContainer>
                     </CenterContainer>
                 </CenterContainer>
+                <div className = "w-2/3 flex justify-between">
+                    <TextButton option = "Back" onClick={backClick} style = {`w-40 bg-cyan-300`}/>
+                    <TextButton option = "Check" onClick={checkClick} style = {`w-40 bg-cyan-300`}/>
+                </div>
             </CenterContainer>
-            <div className = "w-2/3 flex justify-between">
-                <TextButton option = "Back" onClick={backClick} style = {`w-40 bg-cyan-300`}/>
-                <TextButton option = "Check" onClick={checkClick} style = {`w-40 bg-cyan-300`}/>
-            </div>
-        </CenterContainer>
+        </main>
     )
 }

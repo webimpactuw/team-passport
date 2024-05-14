@@ -1,7 +1,9 @@
-export const ProfilePage = () => {
+import Sidebar from "../components/Sidebar"
+
+export default function ProfilePage() {
     return (
-        <div>
-            <h1>Profile</h1>
-        </div>
+        <main className="flex">
+            <Sidebar />
+        </main>
     )
 }
